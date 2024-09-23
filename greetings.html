@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devops Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="gradient-background">
+    <div class="container">
+        <div class="wrapper">
+            <div class="title">
+                <h2>Welcome to Devops Project</h2>
+                <h4>Created by: Matanel, Shirel, Nikita</h4>
+            </div>
+            <div class="greeting_msg" id="msg"></div>
+        </div>
+    </div>
+
+    <script>
+        // Get the query parameter from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const name = urlParams.get('name');
+
+        // Display a greeting message with the name
+        const messageDiv = document.getElementById('msg');
+        if (name) {
+            messageDiv.innerHTML = `<h3>Welcome, ${name}!</h3>`;
+            messageDiv.style.color = "green";
+        } else {
+            messageDiv.innerHTML = `<h3>Welcome, Guest!</h3>`;
+            messageDiv.style.color = "orange";
+        }
+    </script>
+    
+</body>
+</html>
